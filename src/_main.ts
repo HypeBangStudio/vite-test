@@ -2,7 +2,7 @@ import './css/tailwind.css'
 import './css/example.css'
 import './css/style.css'
 import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
+import { setupCounter } from './js/counter'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

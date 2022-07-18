@@ -3,5 +3,53 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="{{resolve-from-root '/src/css/style.css'}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>titlo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+    {{!-- <script type="module">
+
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '0d740b1681msh11ccc4c3c9e8619p180508jsn91f29dc22e86',
+                'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+            }
+        };
+
+        var  
+
+        fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=trapani', options)
+            .then(response => response.json())
+            .then(response => console.log(response))
+            .catch(err => console.error(err));
+    </script> --}}
+
+    {{!-- <script>
+        var ourRequest = new XMLHttpRequest();
+            ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/pets-data.json');
+            ourRequest.onload = function() {
+                if (ourRequest.status >= 200 && ourRequest.status < 400) {
+                    var data = JSON.parse(ourRequest.responseText);
+                    createHTML(data);
+                } else {
+                    console.log("We connected to the server, but it returned an error.");
+                }
+            };
+
+            ourRequest.onerror = function() {
+                console.log("Connection error");
+            };
+
+            ourRequest.send();
+
+            function createHTML(petsData) {
+                var rawTemplate = document.getElementById("petTemplate").innerHTML;
+                var compiledTemplate = Handlebars.compile(rawTemplate);
+                var ourGeneratedHTML = compiledTemplate(petsData);
+
+                var petsContainer = document.getElementById("petsContainer");
+                petsContainer.innerHTML = ourGeneratedHTML;
+            }
+    </script> --}}
+
+
+    <title>{{title}}</title>
 </head>

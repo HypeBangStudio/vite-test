@@ -57,9 +57,6 @@ export default {
               // console.log(fs.readFileSync("src/json/myTemplate.json", "utf8"));
             }
         });
-          
-          
-          
 
           console.log(result);
         },

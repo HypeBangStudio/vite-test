@@ -13,16 +13,29 @@
 {{/forEach}}
 
 
+testJSON
+
   {{#each data.item}}
     <h2>{{name}}</h2>
   {{/each}}-->
-  {{#parseJSON '{"id": "firstname", "label": "First name", "class": "text-emerald-500 font-bold", "text": "lorem pisum"}'}}
-    {{> _input}}
-  {{/parseJSON}}
-  {{#each petTemplate}}
-    {{#each this}}
-      {{@key}} - {{this}} pollo {{/each}}
+
+  {{#createJSON "_addio.hbs" "Pino"}}
+   
+  {{/createJSON}}
+
+  {{#each person}}
+    {{firstName}}
   {{/each}}
+
+  <ul class="people_list">
+    {{#each people}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+
+  
+
+
 </body>
 
 </html>

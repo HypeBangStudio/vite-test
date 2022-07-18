@@ -2,7 +2,9 @@
 import {resolve} from "path";
 import handlebars from "vite-plugin-handlebars";
 var helpers = require("handlebars-helpers")();
-
+const axios = require("axios");
+import fs from "fs";
+import dummyjson from "dummy-json";
 
 export default {
   plugins: [
@@ -34,7 +36,7 @@ export default {
               id: "584ab67b11b75c3a10fc1518",
             },
           ],
-        }, 
+        },
       },
       helpers: {
         // pageTitle: function (value) {
@@ -42,6 +44,24 @@ export default {
         // },
         parseJSON: function (data, options) {
           return options.fn(JSON.parse(data));
+        },
+
+        createJSON: function (myTemplate, fileName) {
+          const template = fs.readFileSync(`jnerator/${myTemplate}`, {encoding: "utf8"});
+          const result = dummyjson.parse(template);
+          fs.writeFile(`src/json/${fileName}.json`, result, (err) => {
+            if (err) console.log(err);
+            else {
+              console.log(`${fileName}.json written successfully\n`);
+              // console.log("The written has the following contents:");
+              // console.log(fs.readFileSync("src/json/myTemplate.json", "utf8"));
+            }
+        });
+          
+          
+          
+
+          console.log(result);
         },
       },
       compileOptions: {

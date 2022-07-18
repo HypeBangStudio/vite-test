@@ -1,0 +1,32 @@
+<div id="content">
+    <h1>content</h1>
+    
+    
+    <div>
+        {{#each this}} Name : {{name}} Value : {{value}} <br> {{/each}}
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    var test_data = [{
+        "name": "john doe",
+        "value": "developer"
+    }, {
+        "name": "bob boby",
+        "value": "developer2"
+    }];
+    setInterval(function () {
+        test_data = fetch_json()
+            .then(function (result) {
+                html = templateScript(result);
+                $('#content').html(html);
+            })
+    }, 2000);
+
+    var template = document.getElementById('handlebars-demo').innerHTML;
+    //Compile the template data into a function
+    var templateScript = Handlebars.compile(template);
+    var html = templateScript(test_data);
+    $('#content').html(html);
+</script>

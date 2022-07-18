@@ -1,0 +1,41 @@
+{
+  "location": {
+    "name": "Trapani",
+    "region": "Sicilia",
+    "country": "Italy",
+    "lat": 38.02,
+    "lon": 12.48,
+    "tz_id": "Europe/Rome",
+    "localtime_epoch": 1658067146,
+    "localtime": "2022-07-17 16:12"
+  },
+  "current": {
+    "last_updated_epoch": 1658062800,
+    "last_updated": "2022-07-17 15:00",
+    "temp_c": 30,
+    "temp_f": 86,
+    "is_day": 1,
+    "condition": {
+      "text": "Sunny",
+      "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+      "code": 1000
+    },
+    "wind_mph": 11.9,
+    "wind_kph": 19.1,
+    "wind_degree": 330,
+    "wind_dir": "NNW",
+    "pressure_mb": 1017,
+    "pressure_in": 30.03,
+    "precip_mm": 0,
+    "precip_in": 0,
+    "humidity": 75,
+    "cloud": 0,
+    "feelslike_c": 32.3,
+    "feelslike_f": 90.2,
+    "vis_km": 10,
+    "vis_miles": 6,
+    "uv": 8,
+    "gust_mph": 8.5,
+    "gust_kph": 13.7
+  }
+}

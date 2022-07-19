@@ -1,61 +1,23 @@
 {{> _header}}
 
 <body>
-  <!-- {{#parseJSON '{"id": "firstname", "label": "First name", "class": "text-emerald-500 font-bold", "text": "lorem pisum"}'}}
-  {{> _input}}
-{{/parseJSON}}
 
 
-{{#forEach accounts}}
-  <a href="mailto:{{ email }}" title="Send an email to {{ name }}">
-    {{ name }}
-  </a>{{#unless isLast}}, {{/unless}}
-{{/forEach}}
-
-
-testJSON
-
-  {{#each data.item}}
-    <h2>{{name}}</h2>
-  {{/each}}-->
-
-<<<<<<< Updated upstream
-  {{#createJSON "_addio.hbs" "Pino"}}
-   
-  {{/createJSON}}
-
-  {{#each person}}
-    {{firstName}}
-  {{/each}}
-
-  <ul class="people_list">
-    {{#each people}}
-      <li>{{this}}</li>
+{{#createJSON "_addio.hbs" "ciao_test"}}
+  {{#JSON 'src/json/ciao_test.json'}}
+    {{#each colors}}
+      {{> _colors-theme}}
     {{/each}}
-  </ul>
-
-  
-=======
-
-{{#json 'src/json/index.json'}}
-  {{#each persons}}
-    {{> input}}
-  {{/each}}
-{{/json}}
-
-
-{{#json 'https://reqres.in/api/users?page=2'}}
-  {{this}}
-{{/json}}
+  {{/JSON}}
+{{/createJSON}}
 
 
 
 
 
 
->>>>>>> Stashed changes
 
 
-</body>
 
+  </body>
 </html>

@@ -1,23 +1,14 @@
 {{> _header}}
-
 <body>
+{{#createJSON "_addio.hbs" "nuovo_test"}}
 
-
-{{#createJSON "_addio.hbs" "ciao_test"}}
-  {{#JSON 'src/json/ciao_test.json'}}
-    {{#each colors}}
-      {{> _colors-theme}}
-    {{/each}}
-  {{/JSON}}
 {{/createJSON}}
 
 
 
 
-
-
-
-
+{{#direction}}
+{{/direction}}
 
   </body>
 </html>

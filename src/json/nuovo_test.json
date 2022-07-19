@@ -1,7 +1,36 @@
 {
-    "colors" : [
-        {"colorName": "crimson"},
-        {"colorName": "goldenrod"},
-        {"colorName": "darkcyan"}
-    ]
+  "users": [
+    {
+      "id": 0,
+      "name": "Jamie Pace",
+      "work": "Coolinga",
+      "email": "jamie.pace@coolinga.xyz",
+      "dob": "1969",
+      "address": "88 Wall Street",
+      "city": "Columbia",
+      "optedin": true
+    },
+    {
+      "id": 1,
+      "name": "Chloe Rikard",
+      "work": "Tecomix",
+      "email": "chloe.rikard@tecomix.me",
+      "dob": "1980",
+      "address": "32 Grosvenor Square",
+      "city": "Cleveland",
+      "optedin": false
+    }
+  ],
+  "images": [
+    "img0.png",
+    "img1.png",
+    "img2.png"
+  ],
+  "coordinates": {
+    "x": 41.14,
+    "y": 7.39
+  },
+  "price": "$26,079"
 }
+
+

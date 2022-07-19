@@ -12,14 +12,13 @@ import dummyjson from "dummy-json";
 
 export default {
   plugins: [
+
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
       layoutsDirectory: resolve(__dirname, "layouts"),
 
-      context: {
-      },
+      context: {},
       helpers: {
-
         createJSON: function (myTemplate, fileName) {
           const template = fs.readFileSync(`jnerator/${myTemplate}`, {encoding: "utf8"});
           const result = dummyjson.parse(template);
@@ -30,7 +29,7 @@ export default {
               // console.log("The written has the following contents:");
               // console.log(fs.readFileSync("src/json/myTemplate.json", "utf8"));
             }
-        });
+          });
         },
 
         JSON: function (path, options) {
@@ -41,6 +40,7 @@ export default {
             console.error(err);
           }
         },
+
 
         // jsonAPI: function (url, options) {
         //   try {
@@ -60,23 +60,24 @@ export default {
         // Example config option: avoid auto-indenting partials
         preventIndent: true,
       },
-      
+
       runtimeOptions: {
-          // Example config option: define custom private @variables
-          data: {
-            title: "Yehuda",
+        // Example config option: define custom private @variables
+        data: {
+          title: "Yehuda",
+        },
+      },
+
+      build: {
+        rollupOptions: {
+          input: {
+            about: resolve(__dirname, "/pages/about.html"),
+            main: resolve(__dirname, "index.html"),
+
+            // aboutjs: resolve(__dirname, 'about.js')
           },
+        },
       },
-
-  build: {
-    rollupOptions: {
-      input: {
-        about: resolve(__dirname, "/pages/about.html"),
-        main: resolve(__dirname, "index.html"),
-
-        // aboutjs: resolve(__dirname, 'about.js')
-      },
-    },
-  },
-  }),
-  ]};
+    }),
+  ],
+};

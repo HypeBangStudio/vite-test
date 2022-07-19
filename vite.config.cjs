@@ -1,10 +1,17 @@
+/** @format */
+
 // vite.config.js
 import {resolve} from "path";
 import handlebars from "vite-plugin-handlebars";
+<<<<<<< Updated upstream
 var helpers = require("handlebars-helpers")();
 const axios = require("axios");
 import fs from "fs";
 import dummyjson from "dummy-json";
+=======
+const fs = require("fs");
+const fetch = require("node-fetch");
+>>>>>>> Stashed changes
 
 export default {
   plugins: [
@@ -60,6 +67,7 @@ export default {
 
           console.log(result);
         },
+<<<<<<< Updated upstream
       },
       compileOptions: {
         // Example config option: avoid auto-indenting partials
@@ -67,16 +75,62 @@ export default {
       },
       runtimeOptions: {
         // Example config option: define custom private @variables
+=======
+
+        p_available_options: function (file) {
+          return JSON.stringify(file);
+        },
+
+        json: function (path, options) {
+          try {
+            console.log(options);
+            const data = fs.readFileSync(path, "utf8");
+            return options.fn(JSON.parse(data));
+          } catch (err) {
+            console.error(err);
+          }
+        },
+
+        jsonAPI: function (url, options) {
+          try {
+            fetch(url, {method: "Get"})
+              .then((res) => res.json())
+              .then((json) => {
+                return "ciao";
+                return json;
+              });
+          } catch (err) {
+            console.error(err);
+          }
+        },
+
+        compileOptions: {
+          // Example config option: avoid auto-indenting partials
+          preventIndent: true,
+        },
+        runtimeOptions: {
+          // Example config option: define custom private @variables
+          data: {
+            title: "Yehuda",
+          },
+        },
+>>>>>>> Stashed changes
       },
     }),
   ],
   build: {
     rollupOptions: {
       input: {
+<<<<<<< Updated upstream
         about: resolve(__dirname, "/pages/about.html"),
         main: resolve(__dirname, "index.html"),
+=======
+        about: resolve(__dirname, "pages/about.html"),
+        main: resolve(__dirname, "index.html"),
+
+        // aboutjs: resolve(__dirname, 'about.js')
+>>>>>>> Stashed changes
       },
     },
   },
 };
-

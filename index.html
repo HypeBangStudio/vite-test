@@ -19,6 +19,7 @@ testJSON
     <h2>{{name}}</h2>
   {{/each}}-->
 
+<<<<<<< Updated upstream
   {{#createJSON "_addio.hbs" "Pino"}}
    
   {{/createJSON}}
@@ -34,6 +35,25 @@ testJSON
   </ul>
 
   
+=======
+
+{{#json 'src/json/index.json'}}
+  {{#each persons}}
+    {{> input}}
+  {{/each}}
+{{/json}}
+
+
+{{#json 'https://reqres.in/api/users?page=2'}}
+  {{this}}
+{{/json}}
+
+
+
+
+
+
+>>>>>>> Stashed changes
 
 
 </body>

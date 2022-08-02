@@ -12,7 +12,6 @@ import dummyjson from "dummy-json";
 
 export default {
   plugins: [
-
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
       layoutsDirectory: resolve(__dirname, "layouts"),
@@ -32,15 +31,20 @@ export default {
           });
         },
 
-        JSON: function (path, options) {
-          try {
-            const data = fs.readFileSync(path, "utf8");
-            return options.fn(JSON.parse(data));
-          } catch (err) {
-            console.error(err);
-          }
-        },
+        // JSON: function (path, options) {
+        //   try {
+        //     const data = fs.readFileSync(path, "utf8");
+        //     console.log(file);
+        //     return options.fn(JSON.parse(data));
+        //   } catch (err) {
+        //     console.error(err);
+        //   }
+        // },
 
+        readJSON: function (input, options) {
+          const file = fs.readFileSync(`${input}`, {encoding: "utf8"});
+          return options.fn(JSON.parse(file));
+        },
 
         // jsonAPI: function (url, options) {
         //   try {

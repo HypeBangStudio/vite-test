@@ -1,7 +1,36 @@
 {
-    "colors" : [
-        {"colorName": "magenta"},
-        {"colorName": "goldenrod"},
-        {"colorName": "darkorchid"}
-    ]
+  "users": [
+    {
+      "id": 0,
+      "name": "Layla Brandt",
+      "work": "Viewtopia",
+      "email": "layla.brandt@viewtopia.mobi",
+      "dob": "1980",
+      "address": "50 Haredale Road",
+      "city": "Christchurch",
+      "optedin": true
+    },
+    {
+      "id": 1,
+      "name": "Joslyn Connor",
+      "work": "Proline",
+      "email": "joslyn.connor@proline.edu",
+      "dob": "1995",
+      "address": "73 Willow Avenue",
+      "city": "Bakersfield",
+      "optedin": true
+    }
+  ],
+  "images": [
+    "img0.png",
+    "img1.png",
+    "img2.png"
+  ],
+  "coordinates": {
+    "x": 14.12,
+    "y": -15.35
+  },
+  "price": "$31,785"
 }
+
+

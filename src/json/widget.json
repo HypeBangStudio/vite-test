@@ -1,11 +1,7 @@
 {
-    "user" : [
-        {"name": "Mario",
-          "modifier": "uno"},
-        {"name": "Petro",
-          "modifier": "due"},
-        {"name": "Altro",
-          "modifier": "tre"}
-        
-    ]
+  "users": [
+    {"name": "Mario", "modifier": "uno"},
+    {"name": "Petro", "modifier": "due"},
+    {"name": "Altro", "modifier": "tre"}
+  ]
 }

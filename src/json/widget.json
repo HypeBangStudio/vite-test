@@ -1,4 +1,11 @@
 {
-  "name ": "This is a square widget",
-  "modifier ": "widget-square"
+    "user" : [
+        {"name": "Mario",
+          "modifier": "uno"},
+        {"name": "Petro",
+          "modifier": "due"},
+        {"name": "Altro",
+          "modifier": "tre"}
+        
+    ]
 }

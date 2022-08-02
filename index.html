@@ -1,14 +1,39 @@
 {{> _header}}
+
 <body>
-{{#createJSON "_addio.hbs" "nuovo_test"}}
+  <!-- {{#parseJSON '{"id": "firstname", "label": "First name", "class": "text-emerald-500 font-bold", "text": "lorem pisum"}'}}
+    {{> _input}}
+  {{/parseJSON}} -->
 
-{{/createJSON}}
+  {{#readJSON "./src/json/widget.json"}}
+  {{#forEach user}}
+    {{> _widget}}
+  {{/forEach}}
+  {{/readJSON}}
 
+<!-- {{#forEach accounts}}
+    <a href="mailto:{{ email }}" title="Send an email to {{ name }}">
+      {{ name }}
+    </a>{{#unless isLast}}, {{/unless}}
+  {{/forEach}} 
+  
+  testJSON {{#each data.item}}
+    <h2>{{name}}</h2>
+  {{/each}} -->
 
+  <!-- {{#createJSON "_addio.hbs" "Pino"}}
+  {{/createJSON}} -->
+  
+  <!-- {{#each person}}
+    {{firstName}}
+  {{/each}} -->
 
+  <!-- <ul class="people_list">
+    {{#each people}}
+      <li>{{this}}</li>
+    {{/each}} 
+  </ul> -->
 
-{{#direction}}
-{{/direction}}
+</body>
 
-  </body>
 </html>
